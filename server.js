@@ -14,6 +14,13 @@ app.use(express.urlencoded({extended:true}))
 app.use(cors())
 mongoose.set('strictQuery', false)
 //'mongodb://localhost/blogs_vinee'
+app.get('/',async(req,res)=>{
+  try {
+    res.send("working successfully")
+  } catch (error) {
+    
+  }
+})
 mongoose.connect(mongoUri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
